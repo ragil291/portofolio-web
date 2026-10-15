@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<header>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Ragil Maulana</title>
+    <style>
+        :root {
+            --bg-deep: #081b2d;
+            --bg-mid: #102c4f;
+            --bg-soft: #143d69;
+            --navy: #0f172a;
+            --primary: #1d4ed8;
+            --primary-soft: #dfeeff;
+            --line: #cfe3ff;
+            --text: #1d2a3a;
+            --muted: #46607d;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background: linear-gradient(180deg, var(--bg-deep) 0%, var(--bg-mid) 45%, var(--bg-soft) 100%);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            padding: 30px;
+            background: linear-gradient(180deg, #ffffff 0%, #eef6ff 100%);
+            box-shadow: 0 12px 28px rgba(8, 27, 45, 0.25);
+            border-radius: 12px;
+            border: 1px solid rgba(125, 211, 252, 0.35);
+        }
+
+        .container1 {
+            max-width: 600px;
+            margin: 30px auto 0;
+            padding: 30px;
+            background: linear-gradient(180deg, #f3f9ff 0%, #eaf2ff 100%);
+            box-shadow: 0 12px 28px rgba(8, 27, 45, 0.2);
+            border-radius: 12px;
+            border: 1px solid rgba(29, 78, 216, 0.18);
+        }
+
+        nav {
+            margin-bottom: 25px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 10px;
+        }
+        nav ul{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: var(--navy);
+            font-weight: bold;
+            font-size: 14px;
+            padding: 6px 12px;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+        nav ul li a:hover {
+            background-color: var(--primary-soft);
+            color: var(--primary);
+        }
+        .hero {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 25px;
+            padding-bottom: 18px;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .profile-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 120px;
+            flex-shrink: 0;
+        }
+
+        .profile-photo {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary);
+            box-shadow: 0 10px 20px rgba(29, 78, 216, 0.18);
+            background-color: #ffffff;
+            display: block;
+        }
+
+        .greeting {
+            margin-top: 10px;
+            font-size: 13px;
+            font-weight: bold;
+            color: var(--navy);
+            text-align: center;
+            width: 100%;
+            display: block;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text p {
+            text-align: left;
+        }
+
+        h1 {
+            color: var(--navy);
+            padding-bottom: 0;
+            margin-top: 0;
+            margin-bottom: 8px;
+            font-family: Georgia, 'Times New Roman', serif;
+            letter-spacing: 0.5px;
+        }
+        h2 {
+            font-size: 20px;
+            color: #0b4f87;
+            margin-top: 25px;
+            font-family: Georgia, 'Times New Roman', serif;
+            letter-spacing: 0.3px;
+        }
+
+        p {
+            font-size: 15px;
+            text-align: justify;
+            color: var(--text);
+        }
+        /* Ordered List */
+        ol {
+            padding-left: 20px;
+            font-size: 15px;
+        }
+        ol li {
+            margin-bottom: 6px;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 12px;
+            font-size: 14px;
+        }
+
+        th,
+        td {
+            border: 1px solid #d6dbe3;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #2217C2;
+            color: #ffffff;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f4f4f9;
+        }
+
+        .highlight-blue {
+            color: #2217C2;
+        }
+
+        .highlight-green {
+            color: #111827;
+        }
+
+        .media-section {
+            margin-top: 30px;
+            padding-top: 10px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .media-section figure {
+            margin: 16px 0 24px;
+        }
+
+        .media-section img,
+        .media-section video {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+        }
+
+        .media-section figcaption {
+            margin-top: 8px;
+            color: #555;
+            font-size: 14px;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                margin: 16px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</header>
+
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="#tentang">Tentang Saya</a></li>
+                <li><a href="#fokus">Fokus Utama</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero" id="tentang">
+            <div class="profile-wrap">
+                <img class="profile-photo" src="img_profil.png" alt="Foto profil Ragil Maulana">
+            </div>
+            <div class="hero-text">
+                <h1>PORTOFOLIO WEB DEVELOPER</h1>
+            </div>
+        </div>
+        
+        <p>Halo! Nama saya <b>Ragil Maulana</b>, seorang mahasiswa Sistem Informasi Universitas Pamulang Serang, 
+            Program Studi Sistem Informasi Semester 5, yang berfokus pada <span class="highlight-blue">
+            <b>pengembangan perangkat lunak</b></span>, administrasi jaringan, serta pengelolaan basis data. 
+            Saat ini saya aktif belajar membuat berbagai proyek aplikasi berbasis web.
+        </p>
+
+        <p>
+            Selain bidang teknologi informasi, saya juga memiliki ketertarikan di dunia <b>desain grafis</b> dan <span
+                class="highlight-green"><b>manajemen aset digital</b></span>.
+        </p>
+
+        <h2 id="fokus">Fokus Pengembangan Saya Saat Ini:</h2>
+        <ol>
+            <li><span class="highlight-blue"><b>Desain &amp; Antarmuka Web:</b></span> Membangun tampilan website yang responsif, rapi, dan mudah dipahami dengan HTML serta CSS.</li>
+            <li><span class="highlight-blue"><b>Frontend Interaktif:</b></span> Menambah pengalaman pengguna yang lebih baik melalui JavaScript dan elemen interaksi pada halaman website.</li>
+            <li><span class="highlight-blue"><b>Pengelolaan Data &amp; Backend Dasar:</b></span> Mempelajari basis data, struktur data, serta cara kerja sistem yang terhubung dengan website.</li>
+            <li><span class="highlight-blue"><b>Portofolio &amp; Produk Digital:</b></span> Menyusun karya berbasis web yang bisa menjadi bukti kemampuan saya sebagai <span class="highlight-green"><b>Web Developer</b></span>.</li>
+        </ol>
+
+        <h2>Rencana Pengembangan Saya</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">No.</th>
+                        <th scope="col">Bidang</th>
+                        <th scope="col">Target Pengembangan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><span class="highlight-blue"><b>HTML &amp; CSS</b></span></td>
+                        <td>Membuat layout website yang rapi, modern, dan <span class="highlight-green"><b>responsif</b></span> untuk berbagai ukuran layar.</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><span class="highlight-blue"><b>JavaScript</b></span></td>
+                        <td>Menambahkan interaksi dinamis agar website lebih nyaman dan profesional untuk pengguna.</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><span class="highlight-blue"><b>Basis Data</b></span></td>
+                        <td>Memahami perancangan dan pengelolaan data untuk mendukung aplikasi web yang lebih terstruktur.</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><span class="highlight-blue"><b>API &amp; Backend</b></span></td>
+                        <td>Mempelajari cara menghubungkan website dengan layanan web dan sistem data secara lebih efisien.</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td><span class="highlight-blue"><b>Pengembangan Karier</b></span></td>
+                        <td>Menjadi mahasiswa <span class="highlight-green"><b>Universitas Pamulang Serang semester 5</b></span> yang terus berkembang dalam dunia web development.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <section class="media-section" aria-labelledby="media-title">
+            <h2 id="media-title">Media &amp; Karya</h2>
+            <figure>
+                <img src="img_magnific.png" alt="Pratinjau kumpulan ikon cuaca dari Magnific">
+                <figcaption>Contoh desain ikon cuaca.</figcaption>
+            </figure>
+        </section>
+    </div>
+
+    <div class="container1">
+        <h1 id="kontak">Kontak</h1>
+        <p>Silakan gunakan informasi berikut untuk menghubungi saya:</p>
+        <ul class="contact-list">
+            <li>Email: <a href="mailto:ragilmaulana@example.com">ragilmaulana@example.com</a></li>
+            <li>Telepon: <a href="tel:+6281234567890">+62 812-3456-7890</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
